@@ -1,0 +1,11 @@
+<div class="statistics-container">
+    <h2>Estatísticas de hoje</h2>
+    <div class="statistics-list" *ngIf="forecastList">
+        <app-statistics-item
+            *ngFor="let item of forecastList.list"
+            [info]="item.weather[0].description"
+            [data]="item.dt_txt"
+            [temp]="item.main.feels_like"
+        ></app-statistics-item>
+    </div>
+</div>

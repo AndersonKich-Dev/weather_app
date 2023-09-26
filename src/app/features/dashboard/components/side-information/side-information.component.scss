@@ -1,0 +1,97 @@
+.side-information-container {
+    width: 0;
+    height: 0;
+    background: var(--white-100);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    border-top: 1px solid var(--white-300);
+    border-left: 1px solid var(--white-300);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    @media only screen and (min-width: 1080px){
+        padding: 15px;
+        gap: 30px;
+        width: 380px;
+        height: 100%;
+    }
+}
+.side-information-date {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.side-information-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    >.temp {
+        font-size: 120px;
+    }
+
+    >.description {
+        display: flex;
+        height: 40px;
+        gap: 30px;
+        justify-content: center;
+        width: 100%;
+
+        >.wrapper-info {
+            gap: 10px;
+            >i {
+                font-size: 22px;
+            }
+
+        }
+    }
+}
+.line {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    height: 5px;
+    background: var(--white-300);
+}
+.side-information-forecast {
+   // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    >.forecast-select {
+        position: relative;
+        border-top: 1px solid var(--white-200);
+        border-bottom: 1px solid var(--white-200);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        background-color: var(--black-200);
+        border-radius: 30px;
+        height: 50px;
+        display: flex;
+        padding: 4px 6px;
+
+        >.select-item {
+            flex: 1;
+            border-radius: 30px;
+            border: none;
+            background: transparent;
+            
+            &.activar {
+                background: var(--white-200);
+            }
+        }
+    }
+
+    >.forecast-result {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        overflow-y: auto;
+    }
+}

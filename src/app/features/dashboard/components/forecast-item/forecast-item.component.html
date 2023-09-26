@@ -1,0 +1,10 @@
+<div class="forecast-item">
+    <div class="forecast-icon w-flex-center">
+        <app-icon [iconId]="icon"></app-icon>
+    </div>
+    <div class="forecast-info w-flex-column-center">
+        <h3>{{ date | customDate }}</h3>
+        <p>{{ description }}</p>
+    </div>
+    <div class="forecast-temp w-flex-center">{{ temp | formatNumber }}&#176;</div>
+</div>

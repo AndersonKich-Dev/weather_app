@@ -1,0 +1,43 @@
+<div class="side-information-container" *ngIf="forecastDay.id">
+    <div class="side-information-date">
+        <span> {{ today | customDate }}</span>
+        <span> {{ today | customDateTime }}</span>
+    </div>
+    <div class="side-information-temp">
+        <span class="temp">{{ forecastDay.main.feels_like | formatNumber }}&#176;</span>
+        <div class="description">
+            <div class="wrapper-info w-flex-center">
+                <i class="fa-solid fa-wind"></i>
+                <p>{{ forecastDay.wind.speed }}km/h</p>
+            </div>
+            <div class="wrapper-info w-flex-center">
+                <i class="fa-solid fa-droplet"></i>
+                <p>{{ forecastDay.main.humidity }}%</p>
+            </div>
+        </div>
+    </div>
+    <span class="line"></span>
+    <div class="side-information-forecast">
+        <h2>A previsão do dia seguinte</h2>
+        <div class="forecast-select">
+            <button [class.activar]="forecastSelectDays === 5" class="select-item w-flex-center" (click)="toggleForecatSelect(5)">
+                5 days
+            </button>
+            <button [class.activar]="forecastSelectDays === 15" class="select-item w-flex-center" (click)="toggleForecatSelect(15)">
+                15 days
+            </button>
+            <button [class.activar]="forecastSelectDays === 30" class="select-item w-flex-center" (click)="toggleForecatSelect(30)">
+                30 days
+            </button>
+        </div>
+        <div class="forecast-result">
+            <app-forecast-item
+                *ngFor="let item of forecastList.list"
+                [icon]="item.weather[0].icon"
+                [date]="item.dt_txt"
+                [description]="item.weather[0].description"
+                [temp]="item.main.temp"
+            ></app-forecast-item>
+        </div>
+    </div>
+</div>

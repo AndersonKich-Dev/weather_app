@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+
+    >.content {
+        width: 100%;
+        height: calc(100vh - 60px);
+        overflow-y: scroll;
+
+        @media only screen and (min-width: 720px) {
+            overflow-y: unset;
+        }
+    }
+}

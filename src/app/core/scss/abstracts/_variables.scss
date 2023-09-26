@@ -1,0 +1,23 @@
+//Colors
+:root{
+    --white-100: rgba(255, 255, 255, 0.1);
+    --white-200: rgba(255, 255, 255, 0.2);
+    --white-300: rgba(255, 255, 255, 0.3);
+    --white-500: rgba(255, 255, 255, 0.5);
+    --white-600: #efefef;
+    --white-800: rgba(255, 255, 255, 0.8);
+    --text-white-600: var(--white-600);
+    --black-200: rgba(0, 0, 0, 0.2);
+  }
+
+.w-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.w-flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

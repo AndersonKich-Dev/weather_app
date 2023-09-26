@@ -1,0 +1,20 @@
+<div class="main-screen-container">
+    <img src="../../../../../assets/images/chuva.jpg" alt="chuva" />
+    <div *ngIf="forecastData.id" class="main-screen-top">
+        <h1 class="title w-flex-center">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>{{ forecastData.name }}, {{ forecastData.sys.country }}</p>
+        </h1>
+    </div>
+
+    <div class="main-screen-botton" *ngIf="forecastData.id">
+        <div class="description">
+            <p>Previsão do tempo</p>
+            <span>{{ forecastData.weather[0].description }}</span>
+            <p>Min: {{ forecastData.main.temp_min | formatNumber }}c&#176; ~ Max: {{ forecastData.main.temp_max | formatNumber }}c&#176;</p>
+        </div>
+        <div class="description-icon">
+            <app-icon [iconId]="forecastData.weather[0].icon" [iconSize]="100"></app-icon>
+        </div>
+    </div>
+</div>

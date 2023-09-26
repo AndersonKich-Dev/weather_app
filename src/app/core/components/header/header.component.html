@@ -1,0 +1,9 @@
+<header class="header">
+    <form [formGroup]="seachForm" (ngSubmit)="submit()" class="header-search-container">
+        <button class="search-button w-flex-center" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <input type="text" formControlName="seachInput" placeholder="Search" />
+    </form>
+</header>

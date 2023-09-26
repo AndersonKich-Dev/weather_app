@@ -1,0 +1,27 @@
+.forecast-item {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    >.forecast-icon {
+        >img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    >.forecast-info {
+        flex: 1;
+        padding-left: 8px;
+        font-size: 15px;
+        align-items: flex-start;
+        text-transform: capitalize;
+    }
+
+    >.forecast-temp {
+        border-left: 1px solid var(--white-500);
+       padding-left: 20px;
+        font-size: 22px;
+    }
+}
